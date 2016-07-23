@@ -10,3 +10,4 @@ typings.json
 *.test.d.ts
 .npmignore
 .atomignore
+.travis.yml
