@@ -1,0 +1,27 @@
+{
+  "name": "enum-values",
+  "version": "1.0.0",
+  "description": "Library for getting the names and values of typescript enum",
+  "typings": "index.d.ts",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha src/**/*.test.js --recursive -c -b"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slavik57/enum-values.git"
+  },
+  "keywords": [
+    "enum"
+  ],
+  "author": "Slava Shpitalny <slavik57@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slavik57/enum-values/issues"
+  },
+  "homepage": "https://github.com/slavik57/enum-values#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}
