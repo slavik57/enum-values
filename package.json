@@ -1,6 +1,6 @@
 {
   "name": "enum-values",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Library for getting the names and values of typescript enum",
   "typings": "index.d.ts",
   "main": "index.js",
