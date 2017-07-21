@@ -1,13 +1,9 @@
 node_modules
-tests
-typings
 tsconfig.json
-typings.json
 *.ts
 !*.d.ts
 *.test.ts
 *.test.js
 *.test.d.ts
 .npmignore
-.atomignore
 .travis.yml

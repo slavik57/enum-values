@@ -5,5 +5,6 @@ export declare class EnumValues {
     }[];
     static getNames(e: any): string[];
     static getValues(e: any): number[];
+    private static isNumericEnum(e);
     private static getObjectValues(e);
 }
