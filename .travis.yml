@@ -2,9 +2,17 @@ language: node_js
 node_js:
   - "6"
   - "6.1"
+before_install:
+  - npm i -g makeshift && makeshift -s @bcoe -r https://registry.npmjs.org
 notifications:
   email:
     recipients:
       - slavik57@gmail.com
     on_success: change
     on_failure: always
+deploy:
+  provider: npm
+  email: slavik57@gmail.com
+  api_key: $NPM_TOKEN
+  on:
+    tags: true
