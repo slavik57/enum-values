@@ -4,7 +4,6 @@ export declare class EnumValues {
         value: number;
     }[];
     static getNames(e: any): string[];
-    static getValues(e: any): number[];
-    private static isNumericEnum(e);
-    private static getObjectValues(e);
+    private static removeNumberKeys(e);
+    static getValues(e: any): (string | number)[];
 }

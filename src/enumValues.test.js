@@ -47,4 +47,26 @@ describe('EnumValues', function () {
             chai_1.expect(enumValues_1.EnumValues.getNamesAndValues(StringValuesTestEnum)).to.deep.equal(expectedResult);
         });
     });
+    describe('mixed values', function () {
+        var MixedEnum;
+        (function (MixedEnum) {
+            MixedEnum["A"] = "first";
+            MixedEnum[MixedEnum["B"] = 2] = "B";
+            MixedEnum["c"] = "third";
+        })(MixedEnum || (MixedEnum = {}));
+        it('getNames should return correct values', function () {
+            chai_1.expect(enumValues_1.EnumValues.getNames(MixedEnum)).to.deep.equal(['A', 'B', 'c']);
+        });
+        it('getValues should return correct values', function () {
+            chai_1.expect(enumValues_1.EnumValues.getValues(MixedEnum)).to.deep.equal(['first', 2, 'third']);
+        });
+        it('getNamesAndValues should return correct values', function () {
+            var expectedResult = [
+                { name: 'A', value: 'first' },
+                { name: 'B', value: 2 },
+                { name: 'c', value: 'third' }
+            ];
+            chai_1.expect(enumValues_1.EnumValues.getNamesAndValues(MixedEnum)).to.deep.equal(expectedResult);
+        });
+    });
 });
