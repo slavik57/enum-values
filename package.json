@@ -30,6 +30,7 @@
     "@types/mocha": "^2.2.41",
     "chai": "^3.5.0",
     "mocha": "^2.5.3",
+    "standard-version": "^4.2.0",
     "typescript": "^2.4.2"
   }
 }
