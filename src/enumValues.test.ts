@@ -55,4 +55,30 @@ describe('EnumValues', () => {
       expect(EnumValues.getNamesAndValues(StringValuesTestEnum)).to.deep.equal(expectedResult);
     });
   })
+
+  describe('mixed values', () => {
+    enum MixedEnum {
+      A = 'first',
+      B = 2,
+      c = 'third'
+    }
+
+    it('getNames should return correct values', () => {
+      expect(EnumValues.getNames(MixedEnum)).to.deep.equal(['A', 'B', 'c']);
+    });
+
+    it('getValues should return correct values', () => {
+      expect(EnumValues.getValues(MixedEnum)).to.deep.equal(['first', 2, 'third']);
+    });
+
+    it('getNamesAndValues should return correct values', () => {
+      const expectedResult = [
+        { name: 'A', value: 'first' },
+        { name: 'B', value: 2 },
+        { name: 'c', value: 'third' }
+      ];
+
+      expect(EnumValues.getNamesAndValues(MixedEnum)).to.deep.equal(expectedResult);
+    });
+  })
 });
