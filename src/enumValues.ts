@@ -4,19 +4,7 @@ export class EnumValues {
   }
 
   static getNames(e: any) {
-    const skinnyE = this.removeNumberKeys(e);
-
-    return Object.keys(skinnyE);
-  }
-
-  private static removeNumberKeys(e: any) {
-    return Object.keys(e).reduce((result, key) => {
-      if (!isNaN(parseInt(key))) {
-        return result;
-      }
-      result[key] = e[key];
-      return result
-    }, {});
+    return Object.keys(e).filter(key => isNaN(+key))
   }
 
   static getValues(e: any) {

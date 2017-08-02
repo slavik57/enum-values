@@ -7,17 +7,7 @@ var EnumValues = (function () {
         return this.getNames(e).map(function (_name) { return { name: _name, value: e[_name] }; });
     };
     EnumValues.getNames = function (e) {
-        var skinnyE = this.removeNumberKeys(e);
-        return Object.keys(skinnyE);
-    };
-    EnumValues.removeNumberKeys = function (e) {
-        return Object.keys(e).reduce(function (result, key) {
-            if (!isNaN(parseInt(key))) {
-                return result;
-            }
-            result[key] = e[key];
-            return result;
-        }, {});
+        return Object.keys(e).filter(function (key) { return isNaN(+key); });
     };
     EnumValues.getValues = function (e) {
         return this.getNames(e).map(function (name) { return e[name]; });
