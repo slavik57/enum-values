@@ -51,16 +51,3 @@ npm install enum-values --save
   // ]
   var namesAndValues2 = EnumValues.getNamesAndValues(StringEnum);
 ```
-
-## Known issues
-Currently the library does not support mixing string and numeric enums.
-
-```javascript
-// This enum will not work:
-enum MixedEnum {
-  A = 'A',
-  1 = 2,
-  3 = 'B',
-  C = 4
-}
-```
