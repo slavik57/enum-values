@@ -20,14 +20,14 @@ describe('EnumValues', () => {
       expect(EnumValues.getValues(NumericValuesTestEnum)).to.deep.equal([0, 1, 2]);
     });
 
-    it('getNameFromValue should return the key for that value', () => {
+    it('getNameFromValue should return the name for that value', () => {
       var expectedResult = "B";
       
       expect(EnumValues.getNameFromValue(NumericValuesTestEnum, 1)).equal(expectedResult);
     });
 
-    it('getNameFromValue should return undefined', () => {
-      expect(EnumValues.getNameFromValue(NumericValuesTestEnum, 11)).equal(undefined);
+    it('getNameFromValue should return null', () => {
+      expect(EnumValues.getNameFromValue(NumericValuesTestEnum, 11)).to.be.null;
     });
 
     it('getNamesAndValues should return correct values', () => {
@@ -52,7 +52,7 @@ describe('EnumValues', () => {
       expect(EnumValues.getNames(StringValuesTestEnum)).to.deep.equal(['A', 'B', 'C']);
     });
 
-    it('getNameFromValue should return the key for that value', () => {
+    it('getNameFromValue should return the name for that value', () => {
       var expectedResult = "B";
       
       expect(EnumValues.getNameFromValue(StringValuesTestEnum, 'BValue')).equal(expectedResult);
