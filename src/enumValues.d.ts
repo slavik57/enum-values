@@ -4,5 +4,6 @@ export declare class EnumValues {
         value: number;
     }[];
     static getNames(e: any): string[];
+    static getNameFromValue(e: any, l: (number | string)): string;
     static getValues(e: any): (string | number)[];
 }

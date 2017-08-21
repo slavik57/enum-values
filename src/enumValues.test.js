@@ -16,6 +16,13 @@ describe('EnumValues', function () {
         it('getValues should return correct values', function () {
             chai_1.expect(enumValues_1.EnumValues.getValues(NumericValuesTestEnum)).to.deep.equal([0, 1, 2]);
         });
+        it('getNameFromValue should return the key for that value', function () {
+            var expectedResult = "B";
+            chai_1.expect(enumValues_1.EnumValues.getNameFromValue(NumericValuesTestEnum, 1)).equal(expectedResult);
+        });
+        it('getNameFromValue should return undefined', function () {
+            chai_1.expect(enumValues_1.EnumValues.getNameFromValue(NumericValuesTestEnum, 11)).equal(undefined);
+        });
         it('getNamesAndValues should return correct values', function () {
             var expectedResult = [
                 { name: 'A', value: 0 },
@@ -34,6 +41,10 @@ describe('EnumValues', function () {
         })(StringValuesTestEnum || (StringValuesTestEnum = {}));
         it('getNames should return correct values', function () {
             chai_1.expect(enumValues_1.EnumValues.getNames(StringValuesTestEnum)).to.deep.equal(['A', 'B', 'C']);
+        });
+        it('getNameFromValue should return the key for that value', function () {
+            var expectedResult = "B";
+            chai_1.expect(enumValues_1.EnumValues.getNameFromValue(StringValuesTestEnum, 'BValue')).equal(expectedResult);
         });
         it('getValues should return correct values', function () {
             chai_1.expect(enumValues_1.EnumValues.getValues(StringValuesTestEnum)).to.deep.equal(['AValue', 'BValue', 'CValue']);
