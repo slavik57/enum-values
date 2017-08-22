@@ -9,6 +9,10 @@ var EnumValues = (function () {
     EnumValues.getNames = function (e) {
         return Object.keys(e).filter(function (key) { return isNaN(+key); });
     };
+    EnumValues.getNameFromValue = function (e, value) {
+        var all = this.getNamesAndValues(e).filter(function (pair) { return pair.value === value; });
+        return all.length == 1 ? all[0].name : null;
+    };
     EnumValues.getValues = function (e) {
         return this.getNames(e).map(function (name) { return e[name]; });
     };

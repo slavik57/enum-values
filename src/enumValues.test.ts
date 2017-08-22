@@ -1,3 +1,4 @@
+
 import { EnumValues } from "./enumValues";
 import { expect } from 'chai';
 
@@ -17,6 +18,16 @@ describe('EnumValues', () => {
 
     it('getValues should return correct values', () => {
       expect(EnumValues.getValues(NumericValuesTestEnum)).to.deep.equal([0, 1, 2]);
+    });
+
+    it('getNameFromValue should return the name for that value', () => {
+      var expectedResult = "B";
+      
+      expect(EnumValues.getNameFromValue(NumericValuesTestEnum, 1)).equal(expectedResult);
+    });
+
+    it('getNameFromValue should return null', () => {
+      expect(EnumValues.getNameFromValue(NumericValuesTestEnum, 11)).to.be.null;
     });
 
     it('getNamesAndValues should return correct values', () => {
@@ -39,6 +50,16 @@ describe('EnumValues', () => {
 
     it('getNames should return correct values', () => {
       expect(EnumValues.getNames(StringValuesTestEnum)).to.deep.equal(['A', 'B', 'C']);
+    });
+
+    it('getNameFromValue should return the name for that value', () => {
+      var expectedResult = "B";
+  
+      expect(EnumValues.getNameFromValue(StringValuesTestEnum, 'BValue')).equal(expectedResult);
+    });
+
+    it('getNameFromValue should return null', () => {
+      expect(EnumValues.getNameFromValue(StringValuesTestEnum, 'BadValue')).to.be.null;
     });
 
     it('getValues should return correct values', () => {

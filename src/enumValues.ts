@@ -7,6 +7,11 @@ export class EnumValues {
     return Object.keys(e).filter(key => isNaN(+key))
   }
 
+  static getNameFromValue(e:any, value:(number|string)) {
+    const all = this.getNamesAndValues(e).filter(pair => pair.value === value );
+    return all.length == 1 ? all[0].name : null;
+  }
+
   static getValues(e: any) {
     return this.getNames(e).map(name => e[name]) as (number | string)[];
   }

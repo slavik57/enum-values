@@ -36,6 +36,15 @@ npm install enum-values --save
   // values will be equal to: ['V4', 'V5']
   var values2 = EnumValues.getValues(StringEnum);
 
+  // name will be 'VALUE4'
+  var nameFromValue1 = EnumValues.getNameFromValue(StringEnum, 'V4')
+
+  // name will be null
+  var nameFromValue2 = EnumValues.getNameFromValue(StringEnum, 'AB')
+
+  // name will be 'VALUE1'
+  var nameFromValue3 = EnumValues.getNameFromValue(NumericEnum, 0);
+  
   // namesAndValues will be equal to:
   // [
   //  { name: 'VALUE1', value: 0 },
