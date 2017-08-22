@@ -54,8 +54,12 @@ describe('EnumValues', () => {
 
     it('getNameFromValue should return the name for that value', () => {
       var expectedResult = "B";
-      
+  
       expect(EnumValues.getNameFromValue(StringValuesTestEnum, 'BValue')).equal(expectedResult);
+    });
+
+    it('getNameFromValue should return null', () => {
+      expect(EnumValues.getNameFromValue(StringValuesTestEnum, 'BadValue')).to.be.null;
     });
 
     it('getValues should return correct values', () => {

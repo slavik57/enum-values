@@ -8,7 +8,7 @@ export class EnumValues {
   }
 
   static getNameFromValue(e:any, value:(number|string)) {
-    const all = this.getNamesAndValues(e).filter(pair => { return pair.value == value;} );
+    const all = this.getNamesAndValues(e).filter(pair => pair.value === value );
     return all.length == 1 ? all[0].name : null;
   }
 
