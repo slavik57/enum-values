@@ -1,9 +1,10 @@
+export declare type EnumValueType = string | number;
 export declare class EnumValues {
-    static getNamesAndValues(e: any): {
+    static getNamesAndValues<T extends EnumValueType>(e: any): {
         name: string;
-        value: number;
+        value: T;
     }[];
     static getNames(e: any): string[];
-    static getNameFromValue(e: any, value: (number | string)): string;
-    static getValues(e: any): (string | number)[];
+    static getNameFromValue<T extends EnumValueType>(e: any, value: T): string | null;
+    static getValues<T extends EnumValueType>(e: any): T[];
 }
