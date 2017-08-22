@@ -17,7 +17,7 @@ describe('EnumValues', () => {
     });
 
     it('getValues should return correct values', () => {
-      expect(EnumValues.getValues(NumericValuesTestEnum)).to.deep.equal([0, 1, 2]);
+      expect(EnumValues.getValues<number>(NumericValuesTestEnum)).to.deep.equal([0, 1, 2]);
     });
 
     it('getNameFromValue should return the name for that value', () => {
@@ -37,7 +37,7 @@ describe('EnumValues', () => {
         { name: 'C', value: 2 }
       ];
 
-      expect(EnumValues.getNamesAndValues(NumericValuesTestEnum)).to.deep.equal(expectedResult);
+      expect(EnumValues.getNamesAndValues<number>(NumericValuesTestEnum)).to.deep.equal(expectedResult);
     });
   })
 
@@ -63,7 +63,7 @@ describe('EnumValues', () => {
     });
 
     it('getValues should return correct values', () => {
-      expect(EnumValues.getValues(StringValuesTestEnum)).to.deep.equal(['AValue', 'BValue', 'CValue']);
+      expect(EnumValues.getValues<string>(StringValuesTestEnum)).to.deep.equal(['AValue', 'BValue', 'CValue']);
     });
 
     it('getNamesAndValues should return correct values', () => {
@@ -73,7 +73,7 @@ describe('EnumValues', () => {
         { name: 'C', value: 'CValue' }
       ];
 
-      expect(EnumValues.getNamesAndValues(StringValuesTestEnum)).to.deep.equal(expectedResult);
+      expect(EnumValues.getNamesAndValues<string>(StringValuesTestEnum)).to.deep.equal(expectedResult);
     });
   })
 
