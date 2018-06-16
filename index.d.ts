@@ -1,1 +1,1 @@
-export { EnumValues } from './src/enumValues';
+export * from './src/enumValues';

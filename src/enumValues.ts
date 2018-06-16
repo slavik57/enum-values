@@ -18,3 +18,6 @@ export class EnumValues {
     return this.getNames(e).map(name => e[name]) as T[];
   }
 }
+
+// Also re-export as ES-2015 default export
+export default EnumValues;
