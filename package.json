@@ -20,7 +20,7 @@
     "enum"
   ],
   "author": "Slava Shpitalny <slavik57@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/slavik57/enum-values/issues"
   },
