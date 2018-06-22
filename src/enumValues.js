@@ -19,3 +19,4 @@ var EnumValues = (function () {
     return EnumValues;
 }());
 exports.EnumValues = EnumValues;
+exports.default = EnumValues;

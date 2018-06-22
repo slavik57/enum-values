@@ -1,4 +1,6 @@
 "use strict";
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
 Object.defineProperty(exports, "__esModule", { value: true });
-var enumValues_1 = require("./src/enumValues");
-exports.EnumValues = enumValues_1.EnumValues;
+__export(require("./src/enumValues"));

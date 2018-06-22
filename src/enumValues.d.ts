@@ -8,3 +8,4 @@ export declare class EnumValues {
     static getNameFromValue<T extends EnumValueType>(e: any, value: T): string | null;
     static getValues<T extends EnumValueType>(e: any): T[];
 }
+export default EnumValues;

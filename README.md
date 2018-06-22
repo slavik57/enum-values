@@ -3,14 +3,15 @@
 Library for getting the names and values of typescript enum
 
 ## Installation
-```
+
+```shell
 npm install enum-values --save
 ```
 
-
 ### Example in TypeScript
-```javascript
-  import { EnumValues } from 'enum-values';
+
+```typescript
+  import EnumValues from 'enum-values';
 
   // Suppose we have an numeric and a string valued enum
   enum NumericEnum {
