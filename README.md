@@ -11,7 +11,7 @@ npm install enum-values --save
 ### Example in TypeScript
 
 ```typescript
-  import EnumValues from 'enum-values';
+  import {EnumValues} from 'enum-values';
 
   // Suppose we have an numeric and a string valued enum
   enum NumericEnum {
